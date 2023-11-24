@@ -1,0 +1,101 @@
+APP_NAME=Crm
+APP_ENV=local
+APP_KEY=base64:5VuAi5n+9oQzKqBakdgzVodrvEUn8olzD28Nu0Lsm9k=
+APP_DEBUG=false
+APP_URL=http://193.70.17.194/nuovo_crm
+
+LOG_CHANNEL=stack
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=crm_db
+DB_USERNAME=francesco
+DB_PASSWORD=Francesco123!
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=465
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=mt1
+
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+
+TEMPLATE_LAYOUT_MENU=headerbar
+TEMPLATE_LAYOUT_MENU=sidebar
+
+#TEMPLATE_COLOR=default
+TEMPLATE_COLOR=teal-theme
+
+INSPIRE_QUOTE_SET=2
+
+
+
+###############
+# CONFIGURAZIONE INVIO REPORT
+
+#può valere true o false senza virgolette
+
+EMAIL_REPORT_SEND=true
+
+#con virgolette, inserire uno o più indirizzi email separati da punto e virgola
+# esempio:  EMAIL_REPORT_TO="blabla@blabla.it;blabla@bla.it"
+
+EMAIL_REPORT_TO="blabla@blabla.it;blabla@bla.it"
+
+# con virgolette, inserire ora e minuti di invio
+# esempio:  EMAIL_REPORT_SEND_AT_TIME="22:30"
+# verificare orario server
+
+EMAIL_REPORT_SEND_AT_TIME="22:30"
+
+
+# Impostare a zero per togliere il limite
+MAX_RECALL_PER_HOUR=4
+
+#include/esclude i ko dal calcolo rese operatore
+USER_PERFORMANCE_INCLUDE_KO=true
+
+SPLIT_DUAL_ON_CREATE=true
+SPLIT_DUAL_ON_UPDATE=true
+SPLIT_DUAL_COPY_MEDIA=true
+SPLIT_DUAL_FROM_BATCH=true
+
+
+# metodo da usare per il calcolo del retribuito
+# "METHOD_1" -> metodo che aggiunge 15 minuti di pause ogni due ore di lavoro (default)
+    # il lavoro è calcolato come "talk + wait + dispo"
+
+# "METHOD_2" -> medoto che aggiunge 3.75 minuti di pausa ogni 30 minuti di lavoro
+    # il lavoro è calcolato come "talk + wait + dispo"
+
+# "METHOD_3" -> medoto che aggiunge 3.75 minuti di pausa ogni 30 minuti di lavoro e 2.7 di acw ogni 30 di lavoro
+    # il lavoro è calcolato come "talk + wait"
+
+PAYTIME_COMPUTE_METHOD = "METHOD_3"
+

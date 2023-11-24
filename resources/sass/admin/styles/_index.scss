@@ -1,0 +1,22 @@
+
+
+html{
+
+    @import "variables_default";
+    @import "generate_vars";
+    @import "customizations";
+    @import "overrides/components/index";
+    @import "overrides/styles/index";
+}
+
+
+/*
+html.teal-theme{
+
+    @import "variables_teal";
+    @import "generate_vars";
+    @import "customizations";
+    @import "overrides/components/index";
+    @import "overrides/styles/index";
+}
+*/

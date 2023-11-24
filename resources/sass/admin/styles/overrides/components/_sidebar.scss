@@ -1,0 +1,28 @@
+.sidebar {
+
+    background: $sidebar-bg;
+
+
+
+    .nav-link {
+        &.active,
+        &:hover {
+            color: $sidebar-nav-link-active-icon-color;
+            background: $sidebar-nav-link-active-bg;
+            i{
+                color: $sidebar-nav-link-active-icon-color;
+            }
+        }
+    }
+
+    .nav-item{
+        &.nav-dropdown{
+            &.open{
+                a.nav-link.nav-dropdown-toggle{
+                    background: $black-light
+                }
+            }
+        }
+    }
+
+}

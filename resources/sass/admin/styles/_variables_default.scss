@@ -1,0 +1,48 @@
+$lightPerc: 10%;
+$darkPerc: 10%;
+
+$_danger: #FE3F61;
+$_success: #60CF7D;
+$_warning: #F5BE30;
+$_mutedText: #b9c8de;
+$_red: $_danger;
+$_blue: #4273fa;
+$_green: $_success;
+$_yellow: #ffc107;
+$_orange: #f8cb00;
+$_cyan: #17a2b8;
+$_teal: #20c997;
+$_pink: #e83e8c;
+$_white: #ffffff;
+$_gray: #5c6873;
+$_gray-2: #8697a7;
+$_gray-3: #f3f8ff;
+$_black: #000000;
+$_primary: $_blue;
+$_secondary: #c8ced3;
+
+
+
+$_badge-background-off: $_teal;
+$_badge-background-on: $_cyan;
+
+$_badge-role-bg-color: $_warning;
+$_badge-role-text-color: $_black;
+
+
+$_sidebar-bg: #485779;
+$_sidebar-nav-link-active-bg: $_primary;
+$_sidebar-nav-link-active-icon-color: $_white;
+$_pagination-hover-bg: $_gray-3;
+
+
+$_hover-primary: darken($_primary,$darkPerc);
+$_shadow-primary: lighten($_primary,$lightPerc);
+
+$_filter-active-hover: $_success;
+$_filter-active-bg : darken($_success,$darkPerc);
+$_filter-active-shadow: lighten($_success,$lightPerc);
+
+$_final-hover: $_yellow;
+$_final-bg : darken($_yellow,$darkPerc);
+$_final-shadow: lighten($_yellow,$lightPerc);

@@ -1,0 +1,31 @@
+// Write your project specific styles here
+
+.dropzone {
+    .dz-preview {
+        &.dz-success {
+            .dz-success-mark {
+                text-align: center;
+            }
+        }
+
+        .dz-image.custom{
+            width: 200px !important;
+            height: 200px !important;
+
+            i+p{
+                white-space: normal;
+                min-height: 20px;
+                height: auto;
+            }
+        }
+
+        .dz-details{
+            .dz-filename{
+                a{
+                    white-space: normal;
+                }
+            }
+        }
+
+    }
+}

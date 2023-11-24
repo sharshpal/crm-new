@@ -1,0 +1,448 @@
+.app-header.navbar {
+    .navbar-brand {
+        color: $primary !important;
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .navbar-collapse {
+        flex-basis: auto;
+
+        .nav-item {
+            min-width: 110px;
+        }
+    }
+
+}
+
+label {
+    color: $black !important;
+}
+
+button.btn,
+a.btn,
+.btn {
+
+    &:disabled,
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
+.recall-dt,
+.p-small {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+}
+
+button {
+
+    &.clean-filter {
+        color: $white !important;
+    }
+
+    &.filter {
+
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+        margin: 5px 3px !important;
+
+        &:hover {
+            background-color: $primary-light;
+            border-color: $primary-light;
+        }
+
+
+        &.final-state {
+            background-color: $final-bg;
+            border-color: $final-bg;
+
+            &:hover {
+                background-color: $final-hover;
+                border-color: $final-hover;
+            }
+
+            .badge {
+                background-color: $badge-background-off;
+            }
+        }
+
+        &.filter-active {
+            box-shadow: 0 0 4px 2px $filter-active-shadow;
+            margin: 7px 7px !important;
+            background-color: $filter-active-hover;
+            border-color: $filter-active-hover;
+
+            &:hover {
+                background-color: $filter-active-bg;
+                border-color: $filter-active-bg;
+            }
+
+            .badge {
+                background-color: $badge-background-on;
+            }
+
+            &.final-state {
+                box-shadow: 0 0 4px 2px $final-shadow;
+                background-color: $final-hover;
+                border-color: $final-hover;
+
+                &:hover {
+                    background-color: $final-bg;
+                    border-color: $final-bg;
+                }
+
+                .badge {
+                    background-color: $badge-background-on;
+                }
+            }
+        }
+
+
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+
+            .badge {
+                background-color: $primary;
+            }
+
+            &.light {
+                opacity: 0.3;
+            }
+        }
+
+        &.light {
+            opacity: 0.6;
+        }
+
+        .badge {
+            border: 1px solid white;
+            border-radius: 100px;
+            text-align: center;
+            min-width: 25px;
+            background-color: $badge-background-off;
+        }
+    }
+
+    &.recall {
+        color: $black !important;
+        margin-right: 20px;
+        width: 180px;
+
+        &:visited, &:focus, &:active {
+            color: $black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .badge {
+            background: $primary;
+            color: white;
+            font-weight: bold;
+            padding: 4px 8px;
+            margin-left: 8px;
+
+
+        }
+
+        &.has-recall {
+            .badge {
+                background: $success;
+            }
+        }
+
+        &.expired {
+            .badge {
+                background: $danger;
+            }
+        }
+
+    }
+}
+
+.filter-row-multiselect {
+    input,
+    select {
+        min-height: 43px;
+    }
+}
+
+.exp-col-ctn {
+    max-height: 60vh;
+    overflow: auto;
+    box-shadow: 0 0 6px 2px lightgrey;
+    padding: 10px 0px 10px 0;
+}
+
+.custom-file-label {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 4.7rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.custom-file-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + 0.75rem);
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #5c6873;
+    content: "Browse";
+    background-color: #f0f3f5;
+    border-right: inherit;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.custom-file-label::after {
+    display: none;
+}
+
+.audio-player {
+    max-width: 100%;
+    height: 28px;
+}
+
+.card-chk {
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.my-switch-label {
+    line-height: 26px;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+table.table-dt {
+    th, td {
+        text-align: center;
+    }
+
+    td.tipo-offerta,
+    td.tipo-contratto,
+    td.mod_pagamento {
+        text-align: center;
+
+        i {
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+    }
+
+    &.table-listing {
+        td:last-of-type {
+
+            display: table-cell;
+            min-width: unset;
+            justify-content: unset;
+
+            > div {
+                display: flex;
+                min-width: 100px;
+                justify-content: space-evenly;
+
+                > a,
+                > button,
+                > form {
+                    margin-left: 3px;
+                    margin-right: 3px;
+                    display: inline-block;
+                }
+            }
+
+            form {
+                display: inline-block;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.form-group {
+    &.has-danger {
+        .multiselect__tags {
+            border-color: $danger !important;
+        }
+    }
+}
+
+textarea.note {
+    min-height: 150px;
+}
+
+.esito-label {
+    font-weight: 500;
+}
+
+.btn-link {
+    color: $primary;
+    text-decoration: underline;
+    text-transform: lowercase;
+
+    &.btn-sm {
+        padding: 0.15rem 0.25rem;
+    }
+
+    &:hover,
+    &:visited,
+    &:focus {
+        color: $primary-dark !important;
+        font-weight: bold;
+    }
+}
+
+.badge {
+    &.badge-role-logo {
+        background-color: $badge-role-bg-color;
+        border-color: $badge-role-bg-color;
+        color: $badge-role-text-color;
+        padding: 5px 10px;
+
+        &.badge-supervisor {
+            border-radius: 10px 0px 10px 10px;
+        }
+
+        &.badge-backoffice {
+            border-radius: 0px 10px 0px 10px;
+        }
+
+        &.badge-admin {
+            border-radius: 10px 0px 10px 0px;
+        }
+
+        &.badge-operatore {
+            border-radius: 10px 10px 10px 0px;
+        }
+    }
+}
+
+
+input.flatpickr:disabled{
+    opacity: 0.7;
+}
+
+.verte__guide svg{
+    box-shadow: 0 0 5px 2px #bbbbbb;
+    border-radius: 100%;
+}
+
+.color-ctn{
+    display: inline-block;
+    padding: 15px 10px;
+    width: 120px;
+    text-align: center;
+
+    .color-title{
+        margin-bottom: 15px;
+    }
+}
+
+.table-listing{
+    &.table-last-normal{
+        td:last-of-type{
+            min-width: unset;
+            display: table-cell;
+            justify-content: unset;
+        }
+    }
+}
+
+.no-items-found {
+    z-index: 4;
+    position: relative;
+}
+
+.st-elem-separator{
+    border-top: 2px solid $primary !important;
+}
+
+/** VUE-CAL **/
+.business-hours {
+    background-color: rgba(51, 255, 0, 0.2);
+    border: solid rgba(39, 255, 0, 0.6);
+    border-width: 2px 0;
+}
+
+.vuecal__time-cell-line.hours:before {border-color: #42b983;}
+
+.vuecal__event.not-available {
+    background: repeating-linear-gradient(45deg, white, white 10px, #f2f2f2 10px, #f2f2f2 20px);/* IE 10+ */
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.vuecal__event.not-available .vuecal__event-time {display: none;align-items: center;}
+
+
+.vuecal__event.recall{
+    z-index: 3;
+    background: var(--red-dark);
+    color: white;
+
+    .vuecal__event-time{
+        span{
+            display: none;
+        }
+    }
+}
+
+
+.logo-img {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: 0;
+}
+
+.user-performance-gross{
+    font-weight: bold;
+    text-align: center;
+    color: var(--gray-2);
+    display: inline-block;
+    width: 100%;
+
+}
+
+.user-performance-net{
+    font-weight: bold;
+    text-align: center;
+    color: var(--green-dark);
+    display: inline-block;
+    width: 100%;
+
+}
+
+.border-upn{
+    border: 1px solid var(--black);
+    border-bottom-color: var(--green-dark);
+    border-top-color: var(--green-dark);
+}
+
+.border-upg{
+    border: 1px solid var(--black);
+}
+
+.up-table{
+    td{
+        padding: 4px;
+    }
+}

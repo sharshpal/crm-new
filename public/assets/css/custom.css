@@ -1,0 +1,7 @@
+.form-check input[type="checkbox"]{
+    opacity: 1 !important;
+}
+
+.no-items-found{
+    text-align: center !important;
+}

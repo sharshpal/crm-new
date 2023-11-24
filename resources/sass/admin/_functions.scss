@@ -1,0 +1,17 @@
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+@function toVarRgb($val){
+    @return rgba(var($val),1);
+}
+
+
+@function v($var) {
+    @return var(--#{$var});
+}
+
+
+@function hexToHSL($hex){
+    @return  "hsl("+ hue($hex) + " " + saturation($hex) + " " + lightness($hex) + ")";
+}
